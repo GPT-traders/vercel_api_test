@@ -96,6 +96,8 @@ async def root():
     """Root endpoint"""
     return {"message": "FastAPI Backend with Gemini GenAI integration"}
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# For Vercel deployment
+from mangum import Mangum
+
+# Create the handler for Vercel
+handler = Mangum(app)

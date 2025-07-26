@@ -5,6 +5,20 @@ const nextConfig = {
   // API configuration
   async rewrites() {
     return [
+      // FastAPI routes - proxy to local FastAPI server
+      {
+        source: "/api/chat",
+        destination: "http://localhost:8000/chat",
+      },
+      {
+        source: "/api/health",
+        destination: "http://localhost:8000/health",
+      },
+      {
+        source: "/api/",
+        destination: "http://localhost:8000/",
+      },
+      // Legacy routes for backward compatibility
       {
         source: "/chat",
         destination: "http://localhost:8000/chat",
@@ -13,6 +27,7 @@ const nextConfig = {
         source: "/health",
         destination: "http://localhost:8000/health",
       },
+      // Other API routes (if any)
       {
         source: "/api/python-hello",
         destination: "/api/python-hello.py",
