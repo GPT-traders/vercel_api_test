@@ -3,27 +3,27 @@ import styles from "../styles/ApiTester.module.css";
 
 export default function ApiTester({ onResult }) {
   const [loading, setLoading] = useState(false);
-  const [selectedEndpoint, setSelectedEndpoint] = useState("/health");
+  const [selectedEndpoint, setSelectedEndpoint] = useState("/api/health");
   const [requestBody, setRequestBody] = useState("");
   const [error, setError] = useState("");
 
   const endpoints = [
     {
-      value: "/health",
-      label: "GET /health",
+      value: "/api/health",
+      label: "GET /api/health",
       method: "GET",
       description:
         "Health check endpoint - verifies FastAPI backend status and Gemini API configuration",
     },
     {
-      value: "/",
-      label: "GET / (Root)",
+      value: "/api/",
+      label: "GET /api/ (Root)",
       method: "GET",
       description: "Root endpoint - basic backend information",
     },
     {
-      value: "/chat",
-      label: "POST /chat",
+      value: "/api/chat",
+      label: "POST /api/chat",
       method: "POST",
       description: "Chat with Gemini AI - send messages and get AI responses",
       sampleBody: JSON.stringify(
