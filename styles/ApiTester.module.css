@@ -1,0 +1,199 @@
+.tester {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.endpointSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.endpointSelector label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.select {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.endpointInfo {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.description {
+  margin: 0 0 0.75rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.methodBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.method {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.method.get {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.method.post {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #b8daff;
+}
+
+.endpoint {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  background: #e9ecef;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.requestBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bodyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bodyHeader label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.sampleButton {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sampleButton:hover {
+  background: #5a6268;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.testButton {
+  background: linear-gradient(45deg, #0070f3, #0051cc);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.testButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 112, 243, 0.4);
+}
+
+.testButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.testButton:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .bodyHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .methodBadge {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .testButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
