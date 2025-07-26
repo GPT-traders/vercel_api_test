@@ -11,6 +11,18 @@
   ],
   "routes": [
     {
+      "src": "/api/health",
+      "dest": "/api/handler.py"
+    },
+    {
+      "src": "/api/chat",
+      "dest": "/api/handler.py"
+    },
+    {
+      "src": "/api",
+      "dest": "/api/handler.py"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/api/handler.py"
     },
@@ -18,5 +30,10 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ]
+  ],
+  "functions": {
+    "api/handler.py": {
+      "maxDuration": 30
+    }
+  }
 }
