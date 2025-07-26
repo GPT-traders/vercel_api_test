@@ -95,9 +95,3 @@ async def chat_endpoint(request: ChatRequest):
 async def root():
     """Root endpoint"""
     return {"message": "FastAPI Backend with Gemini GenAI integration"}
-
-# For Vercel deployment
-from mangum import Mangum
-
-# Create the handler for Vercel
-handler = Mangum(app)
