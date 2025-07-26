@@ -1,8 +1,4 @@
-from mangum import Mangum
-from .main import app
+from api.main import app
 
-# Create the handler for Vercel with proper configuration
-handler = Mangum(
-    app, 
-    lifespan="off"
-) 
+# Expose the FastAPI app for Vercel's ASGI handler
+# Vercel will automatically detect this as an ASGI application 

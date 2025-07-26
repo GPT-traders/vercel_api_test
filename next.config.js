@@ -18,28 +18,6 @@ const nextConfig = {
         source: "/api/",
         destination: "http://localhost:8000/",
       },
-      // Legacy routes for backward compatibility
-      {
-        source: "/chat",
-        destination: "http://localhost:8000/chat",
-      },
-      {
-        source: "/health",
-        destination: "http://localhost:8000/health",
-      },
-      // Other API routes (if any)
-      {
-        source: "/api/python-hello",
-        destination: "/api/python-hello.py",
-      },
-      {
-        source: "/api/data-processing",
-        destination: "/api/data-processing.py",
-      },
-      {
-        source: "/api/ml-prediction",
-        destination: "/api/ml-prediction.py",
-      },
     ];
   },
 
